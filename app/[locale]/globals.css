@@ -25,3 +25,37 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.w-md-editor-text-pre > code,
+.w-md-editor-text-input {
+  font-size: 23px !important;
+  line-height: 24px !important;
+}
+
+.w-md-editor-toolbar svg {
+  width: 16px !important;
+  height: 16px !important;
+  color: #546e7a !important;
+}
+
+/* 定义滚动条的宽度和高度 */
+::-webkit-scrollbar {
+  width: 10px; /* 宽度 */
+  height: 10px; /* 高度 */
+}
+
+/* 定义滚动条轨道的样式 */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* 背景色 */
+}
+
+/* 定义滑块的样式 */
+::-webkit-scrollbar-thumb {
+  background: #bbb; /* 滑块颜色 */
+  border-radius: 5px; /* 添加圆角 */
+}
+
+/* 滑块在鼠标悬停时的样式 */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
