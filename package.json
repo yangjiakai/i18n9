@@ -6,12 +6,17 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "analyze:server": "ANALYZE=true next build",
+    "analyze:client": "ANALYZE=true next build-client",
+    "analyze:browser": "ANALYZE=true next build-browser"
   },
   "dependencies": {
+    "@next/bundle-analyzer": "^14.0.1",
     "@reduxjs/toolkit": "^1.9.7",
     "@uiw/react-md-editor": "^3.25.2",
     "autoprefixer": "10.4.16",
+    "axios": "^1.6.0",
     "daisyui": "^3.9.4",
     "eslint": "8.52.0",
     "eslint-config-next": "14.0.1",

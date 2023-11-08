@@ -1,10 +1,22 @@
+"use client";
 
-"use client"
-
-import { useTranslations } from 'next-intl';
-import Header from '../../components/Header';
+import { useTranslations } from "next-intl";
+import Header from "../../components/Header";
+import { getAreas } from "@/api/areaApi";
+import { useEffect } from "react";
 export default function Home() {
-  const t = useTranslations('Menu');
+  useEffect(() => {
+    const fetchAreas = async () => {
+      const areas = await getAreas({
+        payStyle: "buy",
+        liveStyle: "house",
+      });
+    };
+
+    fetchAreas();
+  });
+
+  const t = useTranslations("Menu");
   return (
     <>
       <Header />
@@ -12,6 +24,5 @@ export default function Home() {
         {t("home")}
       </main>
     </>
-
-  )
+  );
 }

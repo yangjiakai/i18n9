@@ -1,11 +1,14 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
 
-}
+const withBundleAnalyzer = require("@next/bundle-analyzer")({
+  enabled: process.env.ANALYZE === "true",
+});
 
-const withNextIntl = require('next-intl/plugin')(
+const withNextIntl = require("next-intl/plugin")(
   // This is the default (also the `src` folder is supported out of the box)
-  './i18n.js'
+  "./i18n.js"
 );
 
-module.exports = withNextIntl(nextConfig)
+const nextConfig = {};
+
+module.exports = withBundleAnalyzer(withNextIntl(nextConfig));
