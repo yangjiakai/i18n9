@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import Header from "../../components/Header";
+import Header from "@/components/layout/Header";
 import { getAreas } from "@/api/areaApi";
 import { useEffect } from "react";
 export default function Home() {
