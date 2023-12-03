@@ -13,7 +13,7 @@ export default function AppLayout({ children }) {
         <Header />
       </header>
       {/* Main Content */}
-      <main className="flex-1">{children}</main>
+      <main className="flex-1 ">{children}</main>
       {/* Footer */}
       <Footer />
     </div>
